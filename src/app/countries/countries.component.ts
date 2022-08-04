@@ -6,7 +6,7 @@ import { Country } from './Country';
 @Component({
   selector: 'app-countries',
   templateUrl: './countries.component.html',
-  styleUrls: ['./countries.component.css'],
+  styleUrls: ['./countries.component.scss'],
 })
 export class CountriesComponent implements OnInit {
   public countries: Country[] = [];
