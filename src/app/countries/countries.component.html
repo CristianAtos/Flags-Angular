@@ -1,0 +1,45 @@
+<div>
+  <button (click)="sort()">
+    Sort {{ isAscending ? 'Descending' : 'Ascending' }}
+  </button>
+  <button (click)="previousPage()" [disabled]="currentPage == 0">
+    Previous
+  </button>
+  {{ currentPage + 1 }}
+  <button (click)="nextPage()" [disabled]="currentPage == getMaxPage()">
+    Next
+  </button>
+  <select name="column" [(ngModel)]="selectedColumn">
+    <option value="all">All</option>
+    <option *ngFor="let value of keyArray" value="{{ value }}">
+      {{ value }}
+    </option>
+  </select>
+  <input type="text" (input)="search($event)" />
+  <table *ngIf="countries.length > 0; else elseBlock">
+    <thead>
+      <th *ngFor="let header of keyArray">{{ header }}</th>
+    </thead>
+    <tbody>
+      <tr
+        *ngFor="
+          let item of countries
+            | slice: currentPage * pageSize:currentPage * pageSize + pageSize
+        "
+        (click)="open(item.commonName)"
+      >
+        <td *ngFor="let key of keyArray">
+          <img
+            *ngIf="key == 'flag'; else elseTd"
+            src="{{ item[key] }}"
+            alt="flag"
+          />
+          <ng-template #elseTd>{{ item[key] }} </ng-template>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <ng-template #elseBlock>
+    <div>No data to display!</div>
+  </ng-template>
+</div>
