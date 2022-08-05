@@ -6,5 +6,5 @@ export interface Country {
   population: number;
   languages: string;
   flag: string;
-  subregion: string;
+  // subregion: string;
 }

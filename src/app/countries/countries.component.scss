@@ -18,17 +18,17 @@ tr:nth-child(even){
 }
 td{
     border: 1px solid black;
+    &img{
+        border-radius: 10px;
+        height: 40%;
+        width: 40%;
+    }
 }
 
 table{
     border-collapse: collapse;
 }
 
-img{
-    border-radius: 10px;
-    height: 40%;
-    width: 40%;
-}
 
 button{
     padding: 8px;
@@ -37,10 +37,10 @@ button{
     background-color: rgb(12, 169, 44);
     border-radius: 10%;
     min-width: 76.32px;
+    &:hover{
+        background-color: rgb(255, 176, 103);
+    }
     
-}
-button:hover{
-    background-color: rgb(255, 176, 103);
 }
 
 input{

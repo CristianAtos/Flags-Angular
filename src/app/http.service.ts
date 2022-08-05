@@ -32,7 +32,8 @@ export class HttpService {
                 flag: country.flags.png,
                 region: country.region,
                 population: country.population,
-                subregion: country.subregion || 'No region to display',
+                // subregion: country.subregion || 'No region to display!',
+                
               }
           )
           .sort((a, b) => a.name.localeCompare(b.name))
