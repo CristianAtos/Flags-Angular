@@ -33,4 +33,9 @@ e2e/*.map
 # System Files
 .DS_Store/
 
+#Firebase
+
+.firebase/
+.firebaserc
+firebase.json
 # End of https://www.toptal.com/developers/gitignore/api/angular

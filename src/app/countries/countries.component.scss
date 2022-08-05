@@ -1,17 +1,23 @@
-th{
-    background-color: rgb(210, 37, 37);
-    border : 1px solid black; 
-    text-align: center;    
+body, html{
+    font-family: sans-serif;
 }
 
-td{
-    border: 1px solid black;
+th{
+    background-color: rgba(45, 164, 45, 0.641);
+    border : 1px solid black; 
+    text-align: center;    
+    font-size: 1.5rem;
+    text-transform: capitalize;
 }
 
 tr{
-    background-color: rgb(229, 78, 78);
-    border: 1px solid black;
     text-align: center;
+}
+tr:nth-child(even){
+    background-color: rgba(251, 183, 109, 0.579);
+}
+td{
+    border: 1px solid black;
 }
 
 table{
@@ -19,16 +25,24 @@ table{
 }
 
 img{
+    border-radius: 10px;
     height: 40%;
     width: 40%;
 }
 
 button{
-    margin: 5px;
-    size: 2rem;
-    background-color: rgb(177, 38, 38) ;
+    padding: 8px;
+    font-weight: 600;
+    margin: 10px;
+    background-color: rgb(12, 169, 44);
+    border-radius: 10%;
+    min-width: 76.32px;
+    
+}
+button:hover{
+    background-color: rgb(255, 176, 103);
 }
 
-button:hover{
-       background-color: rgb(220, 105, 105);
+input{
+    margin-left: 10px;
 }
